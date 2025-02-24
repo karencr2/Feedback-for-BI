@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="Imagens/favicon-32x32.png">
+
+</head>
+<body>
+    <div class="container">
+        <h1 id="titulo">Give Your Feedback for BI</h1>
+        <p>Envie suas sugestões de melhoria, dificuldades ou problemas encontrados nos Dashboards.</p> <br>
+        <form id="feedback-form">
+            <fieldset class="grupo">
+                <legend><strong>Dados do Usuário</strong></legend> <br>
+
+                <div class="campo">
+                    <label for="nome"><strong>Nome</strong></label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="sobrenome"><strong>Sobrenome:</strong></label>
+                    <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome">
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="linha">
+                    <div class="campo">
+                        <label for="setor"><strong>Setor/Área:</strong></label>
+                        <input type="text" id="setor" name="setor" placeholder="Ex: Financeiro, Vendas">
+                        <span class="error-message"></span>
+                    </div>
+                
+                    <div class="campo">
+                        <label for="cargo"><strong>Cargo:</strong></label>
+                        <input type="text" id="cargo" name="cargo" placeholder="Ex: Analista, Gerente, Assistente">
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+                
+            </fieldset>
+
+            
+            <br>
+            <fieldset class="grupo">
+                <legend><strong>Detalhes do Feedback</strong></legend> <br>
+                <div class="campo">
+                    <label for="tipo"><strong>Tipo de Feedback:</strong></label>
+                    <select id="tipo" name="tipo">
+                        <option selected disabled value="">Selecione</option>
+                        <option value="sugestao">Sugestão de Melhoria</option>
+                        <option value="problema">Problema Técnico</option>
+                        <option value="dificuldade">Dificuldade de Uso</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="dashboard"><strong>Dashboard Relacionado:</strong></label>
+                    <input type="text" id="dashboard" name="dashboard" placeholder="Nome do Dashboard">
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="descricao"><strong>Descrição do Feedback:</strong></label>
+                    <textarea id="descricao" name="descricao" cols="38" rows="3" placeholder="Detalhe sua sugestão de melhoria, reclamação ou problema encontrados"></textarea>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="descricao"><strong>Sugestões para melhorar a visualização?</strong></label>
+                    <textarea id="visualizacao" name="visualizacao" cols="38" rows="3" placeholder="Descreva a visualização desejada que poderia ajudar você!"></textarea>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="prioridade"><strong>Prioridade:</strong></label>
+                    <select id="prioridade" name="prioridade">
+                        <option value="baixa">Baixa</option>
+                        <option value="media">Média</option>
+                        <option value="alta">Alta</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="anexo"><strong>Anexar Imagem (Opcional):</strong></label>
+                    <input type="file" id="anexo" name="anexo">
+                </div>
+            </fieldset>
+            
+            <br> <button class="botao" type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
